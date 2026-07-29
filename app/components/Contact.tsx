@@ -178,10 +178,6 @@ export default function Contact() {
                 >
                   Adv. Abdul Mulla
                 </h3>
-
-                <p className="font-body text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] text-muted-gold">
-                  ADVOCATE • BAR COUNCIL OF MH & GA
-                </p>
               </div>
 
               {/* Bottom Instruction */}
@@ -237,7 +233,7 @@ export default function Contact() {
                     <div className="grow">
                       <span className="font-body block text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-white/40 mb-0.5">Address</span>
                       <span className="font-body leading-relaxed text-[13px] sm:text-sm">
-                        103/3/3, Unit No. 409, 4th Floor, Krystal Square, E Ward, Nagala Park, Near Khanvilkar Pump, Kolhapur - 416 003
+                        Unit No. 409, 4th Floor, Krystal Square, E Ward, Nagala Park, Near Khanvilkar Pump, Kolhapur - 416 003
                       </span>
                     </div>
                   </li>

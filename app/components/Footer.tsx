@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 const SOCIAL_LINKS = [
   {
     name: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/asmlegalservices/",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -32,7 +32,7 @@ const SOCIAL_LINKS = [
   },
   {
     name: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/adv.abdul_mulla?igsh=MWNlcm52c3Y1aDg4MA%3D%3D",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.668-4.771 4.919-4.919 1.266-.057 1.647-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.196-7.675 3.513-7.873 7.873-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948 1.97 4.369 5.296 7.686 7.873 7.873 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.196 7.671-3.513 7.873-7.873.058-1.281.072-1.689.072-4.948 0-3.259-.014-3.667-.072-4.947-.197-4.354-3.513-7.671-7.873-7.873-1.281-.059-1.69-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm2.344-11.844c-.808 0-1.463.655-1.463 1.463s.655 1.463 1.463 1.463 1.463-.655 1.463-1.463-.656-1.463-1.463-1.463z" />
@@ -53,26 +53,23 @@ export default function Footer() {
           <div className="md:col-span-4 flex flex-col justify-between gap-6">
             <div>
               <h3
-                className="text-2xl text-white font-bold tracking-wide mb-3"
+                className="text-4xl text-white font-bold pt-15 tracking-wide animate-pulse"
                 style={{ fontFamily: '"Times New Roman", Times, serif' }}
               >
                 Adv. Abdul Mulla
               </h3>
-              <p className="text-sm text-white/50 leading-relaxed max-w-sm font-body tracking-wide">
-                Enrolled with the Bar Council of Maharashtra and Goa (since 2006). Providing expert legal counsel, conveyancing, and fostering digital legal awareness.
-              </p>
             </div>
 
             {/* Social Media Links */}
             <div>
-              <div className="flex gap-3">
+              <div className="flex gap-5 mb-15">
                 {SOCIAL_LINKS.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/70 hover:text-muted-gold hover:border-muted-gold/50 hover:bg-white/10 transition-colors hover:scale-105 transition-transform duration-300"
+                    className="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/70 hover:text-muted-gold hover:border-muted-gold/50 hover:bg-white/10 transition-colors hover:scale-105 transition-transform duration-300"
                     aria-label={link.name}
                   >
                     {link.icon}
@@ -144,7 +141,7 @@ export default function Footer() {
                     <ArrowRight className="w-3 h-3 text-muted-gold" />
                   </span>
                   <span className="group-hover:translate-x-1 transition-transform duration-300">
-                    EasyWill India
+                    Easy Will India
                   </span>
                 </a>
               </li>
@@ -222,7 +219,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
                 <span className="leading-relaxed font-body tracking-wide">
-                  103/3/3, Unit No. 409, 4th Floor, Krystal Square, E-Ward, Nagala Park, Near Khanvilkar Pump, Kolhapur - 416 003
+                  Unit No. 409, 4th Floor, Krystal Square, E-Ward, Nagala Park, Near Khanvilkar Pump, Kolhapur - 416 003
                 </span>
               </li>
               <li className="flex gap-3 items-center">
@@ -254,8 +251,9 @@ export default function Footer() {
         </div>
 
         {/* Copyright Section */}
-        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-white/35 font-light">
+        <div className="border-t font-body border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-white/35 font-light">
           <p>© {new Date().getFullYear()} Adv. Abdul Mulla. All Rights Reserved.</p>
+          <p>Developed by <a href="https://asmrankrise.com" target="_blank" rel="noopener noreferrer" className="text-muted-gold hover:text-white transition-colors duration-200">ASM RankRise</a>. Built in India with love❤️ for world-class businesses.</p>
         </div>
 
       </div>

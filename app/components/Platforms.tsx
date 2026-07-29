@@ -23,7 +23,7 @@ const PLATFORMS = [
     link: "https://knowdivorce.in/"
   },
   {
-    title: "EasyWill India",
+    title: "Easy Will India",
     subtitle: "Digital Wills & Succession Planning",
     description: "Smart, secure estate planning made easy.",
     cta: "Visit Website",

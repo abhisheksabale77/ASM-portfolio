@@ -39,7 +39,7 @@ export default function Hero() {
           </p>
 
           <p className="max-w-[330px] sm:max-w-[500px] font-body text-xs sm:text-sm md:text-base text-justify text-white/95 mb-8 sm:mb-10 leading-relaxed text-left drop-shadow">
-            Committed to providing legal services with professionalism, integrity, and diligence. Dedicated to assisting clients through legal processes with careful legal analysis, ethical practice, and a client-focused approach while upholding the highest standards of the legal profession.
+            Approaching every legal matter with integrity, clarity and thoughtful preparation. Focused on understanding concerns with care, communicating with purpose and carrying out professional responsibilities with diligence, balance and ethical judgment—while supporting informed decision-making throughout the legal process.
           </p>
 
           <div className="flex flex-wrap gap-4">

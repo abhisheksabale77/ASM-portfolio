@@ -4,18 +4,18 @@ import Image from "next/image";
 
 const PRACTICE_AREAS = [
   {
-    title: "Civil Law",
-    subtitle: "Civil Litigation",
+    title: "Civil & Revenue Litigation",
+    //subtitle: "Civil & Revenue Litigation",
     image: "/practice/civil_law.png",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
       </svg>
     ),
-  },
+  }, 
   {
-    title: "Criminal Law",
-    subtitle: "Criminal & White-Collar",
+    title: "Criminal Litigation & White Collar Crimes",
+    //subtitle: "Criminal & White-Collar",
     image: "/practice/criminal_law.png",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -24,8 +24,8 @@ const PRACTICE_AREAS = [
     ),
   },
   {
-    title: "Family Law",
-    subtitle: "Family & Matrimonial",
+    title: "Matrimonial & Family Disputes",
+    //subtitle: "Family & Matrimonial",
     image: "/practice/family_law.png",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -34,8 +34,8 @@ const PRACTICE_AREAS = [
     ),
   },
   {
-    title: "Property Law",
-    subtitle: "Real Estate & Revenue",
+    title: "Real Estate & Property Law",
+    //subtitle: "Real Estate & Revenue",
     image: "/practice/property_law.png",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -44,8 +44,8 @@ const PRACTICE_AREAS = [
     ),
   },
   {
-    title: "Estate Planning",
-    subtitle: "Wills & Succession",
+    title: "Wills, Succession & Estate Planning",
+    //subtitle: "Wills & Succession",
     image: "/practice/estate_planning.png",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -54,9 +54,9 @@ const PRACTICE_AREAS = [
     ),
   },
   {
-    title: "Arbitration",
-    subtitle: "Mediation & ADR",
-    image: "/practice/arbitration.png",
+    title: "HNI & NRI Legal Services",
+    //subtitle: "Mediation & ADR",
+    image: "/practice/HNI_RNI.png",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
@@ -64,8 +64,8 @@ const PRACTICE_AREAS = [
     ),
   },
   {
-    title: "Corporate Law",
-    subtitle: "Startup Support",
+    title: "Startup & Early Stage Companies",
+    //subtitle: "Startup Support",
     image: "/practice/corporate_law.png",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -74,8 +74,8 @@ const PRACTICE_AREAS = [
     ),
   },
   {
-    title: "Documentation",
-    subtitle: "Conveyance & Deeds",
+    title: "Conveyancing & Documentation Services",
+    //subtitle: "Conveyance & Deeds",
     image: "/practice/documentation.png",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -200,14 +200,17 @@ export default function About() {
                 </svg>
               </div>
 
-              <div className="flex flex-col justify-center grow py-2">
+              <div className="flex flex-col justify-center grow py-2 px-3">
                 <div className="h-[2px] w-12 bg-muted-gold mb-5" />
-                <div className="space-y-4 font-body text-on-surface-variant font-medium text-sm md:text-base leading-relaxed md:leading-loose">
+                <div className="space-y-4 text-justify font-body text-on-surface-variant font-medium text-xs md:text-base leading-4.5 md:leading-6">
                   <p>
-                    Adv. Abdul Mulla is enrolled with the Bar Council of Maharashtra and Goa and has been in legal practice since 2006. His work spans diverse areas of law, with an emphasis on clarity, responsible representation and informed decision-making.
+                    Adv. Abdul Mulla is enrolled with the Bar Council of Maharashtra and Goa and has been in legal practice since 2006. His professional work includes litigation and dispute resolution, real estate and property matters, family and matrimonial matters, wills and succession planning, and advisory support for individuals, families and organisations.
                   </p>
                   <p>
-                    Guided by integrity, professional ethics and respect for the rule of law, he is committed to making legal processes easier to understand and helping individuals, families and organisations approach their concerns with greater awareness and confidence. His writings and knowledge initiatives further reflect his commitment to education, personal growth and positive social change.
+                    His approach is grounded in careful preparation, clarity, professional ethics and responsible representation. He remains committed to helping people understand legal processes, consider the available options and make informed decisions in accordance with law.
+                  </p>
+                  <p>
+                    Beyond legal practice, his writings and knowledge initiatives reflect a continuing interest in legal awareness, education, personal development and positive social change.
                   </p>
                 </div>
               </div>
@@ -232,7 +235,7 @@ export default function About() {
           </div>
 
           {/* Cards Grid with Images */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-6">
+          <div className="grid text-center grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-6">
             {PRACTICE_AREAS.map((item) => (
               <div
                 key={item.title}
@@ -261,9 +264,6 @@ export default function About() {
                     <h3 className="font-heading text-xs sm:text-sm font-bold text-slate-navy leading-tight mb-1 group-hover:text-muted-gold transition-colors">
                       {item.title}
                     </h3>
-                    <p className="font-body text-[10px] sm:text-xs text-on-surface-variant/80 leading-snug">
-                      {item.subtitle}
-                    </p>
                   </div>
                 </div>
               </div>
