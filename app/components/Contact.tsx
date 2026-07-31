@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 
+import Image from "next/image";
+
 interface FormData {
   firstName: string;
   lastName: string;
@@ -166,14 +168,25 @@ export default function Contact() {
 
               {/* Content */}
               <div className="relative z-10">
-                {/* Experience Badge */}
-                <div className="w-16 h-16 rounded-full border border-muted-gold/30 bg-muted-gold/[0.08] flex flex-col items-center justify-center mb-10 transition-transform duration-500 group-hover:scale-105 select-none shrink-0">
-                  <span className="font-heading text-lg font-bold text-muted-gold leading-none">21+</span>
-                  <span className="font-body text-[8px] font-bold uppercase tracking-wider text-muted-gold/80 mt-0.5">Years Exp</span>
+                {/* Header: Logo & Experience Badge */}
+                <div className="flex items-center justify-between gap-4 mb-8">
+                  <Image
+                    src="/legal services.png"
+                    alt="ASM Legal Services Logo"
+                    width={160}
+                    height={45}
+                    style={{ width: "auto" }}
+                    className="h-9 sm:h-11 md:h-12 w-auto object-contain brightness-0 invert drop-shadow"
+                    priority
+                  />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border border-muted-gold/30 bg-muted-gold/[0.08] flex flex-col items-center justify-center transition-transform duration-500 group-hover:scale-105 select-none shrink-0">
+                    <span className="font-heading text-base sm:text-lg font-bold text-muted-gold leading-none">21+</span>
+                    <span className="font-body text-[7px] sm:text-[8px] font-bold uppercase tracking-wider text-muted-gold/80 mt-0.5">Years Exp</span>
+                  </div>
                 </div>
 
                 <h3
-                  className="text-2xl sm:text-3xl md:text-[34px] font-bold text-white tracking-wider mb-3 pt-6 leading-tight"
+                  className="text-2xl sm:text-3xl md:text-[34px] font-bold text-white tracking-wider mb-3 pt-2 leading-tight"
                   style={{ fontFamily: '"Times New Roman", Times, serif' }}
                 >
                   Adv. Abdul Mulla
@@ -233,7 +246,7 @@ export default function Contact() {
                     <div className="grow">
                       <span className="font-body block text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-white/40 mb-0.5">Address</span>
                       <span className="font-body leading-relaxed text-[13px] sm:text-sm">
-                        Unit No. 409, 4th Floor, Krystal Square, E Ward, Nagala Park, Near Khanvilkar Pump, Kolhapur - 416 003
+                        Unit No. 409, 4th Floor, Krystal Square, E Ward, Nagala Park, Near Khanvilkar Pump, <span className="whitespace-nowrap">Kolhapur - 416003</span>
                       </span>
                     </div>
                   </li>

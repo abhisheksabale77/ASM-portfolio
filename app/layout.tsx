@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   title: "Adv. Abdul Mulla | Advocate & Author",
   description:
     "Professional portfolio of Adv. Abdul Mulla — Advocate, Author, Blogger, and Legal Awareness Contributor.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +36,9 @@ export default function RootLayout({
       lang="en"
       className={`${libreCaslon.variable} ${hankenGrotesk.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

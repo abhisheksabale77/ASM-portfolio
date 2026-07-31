@@ -72,8 +72,15 @@ body {
 }
 
 @keyframes slowPan {
-  0%, 100% { transform: scale(1.05) translate(0px, 0px); }
-  50% { transform: scale(1.1) translate(-10px, -5px); }
+
+  0%,
+  100% {
+    transform: scale(1.05) translate(0px, 0px);
+  }
+
+  50% {
+    transform: scale(1.1) translate(-10px, -5px);
+  }
 }
 
 .animate-ken-burns {
@@ -86,6 +93,7 @@ body {
     transform: translateY(30px) scale(0.98);
     filter: blur(5px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -101,13 +109,16 @@ body {
 .perspective-1000 {
   perspective: 1000px;
 }
+
 .preserve-3d {
   transform-style: preserve-3d;
 }
+
 .backface-hidden {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
+
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
@@ -122,6 +133,7 @@ body {
     opacity: 0;
     transform: translateY(16px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);

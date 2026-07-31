@@ -163,7 +163,7 @@ export default function About() {
                   className="text-xl md:text-2xl text-slate-navy font-bold tracking-wide mb-2 text-center"
                   style={{ fontFamily: '"Times New Roman", Times, serif' }}
                 >
-                  Adv. Abdul Mulla
+                  Abdul Mulla
                 </h3>
                 <p className="font-body text-[9px] font-semibold tracking-[0.2em] text-muted-gold mb-4 text-center uppercase">
                   Advocate
@@ -177,7 +177,7 @@ export default function About() {
                 </div>
 
                 <p className="font-bold text-xs text-on-surface-variant/80 italic text-center mb-4 leading-relaxed">
-                  Defending Rights. Delivering Justice.
+                  Defending Rights. Preventing Complications
                 </p>
               </div>
 
@@ -204,13 +204,16 @@ export default function About() {
                 <div className="h-[2px] w-12 bg-muted-gold mb-5" />
                 <div className="space-y-4 text-justify font-body text-on-surface-variant font-medium text-xs md:text-base leading-4.5 md:leading-6">
                   <p>
-                    Adv. Abdul Mulla is enrolled with the Bar Council of Maharashtra and Goa and has been in legal practice since 2006. His professional work includes litigation and dispute resolution, real estate and property matters, family and matrimonial matters, wills and succession planning, and advisory support for individuals, families and organisations.
+                    Adv. Abdul Mulla’s professional work includes litigation, property and real estate matters, family disputes, wills and succession, conveyancing, documentation, and advisory support for individuals, startups, early stage companies and organisations. 
                   </p>
                   <p>
-                    His approach is grounded in careful preparation, clarity, professional ethics and responsible representation. He remains committed to helping people understand legal processes, consider the available options and make informed decisions in accordance with law.
+                    His practice is centred on understanding each client’s objective, addressing the matter with clarity and responsibility and proactively identifying steps that may help prevent future legal complications.
                   </p>
                   <p>
-                    Beyond legal practice, his writings and knowledge initiatives reflect a continuing interest in legal awareness, education, personal development and positive social change.
+                    With an emphasis on careful preparation and clear communication, every matter is approached by first understanding the client’s objective, addressing the immediate concern and considering steps that may help prevent future legal complications. 
+                  </p>
+                  <p>
+                    The practice also seeks to create and maintain trustworthy professional relationships founded on transparency, mutual respect, responsible guidance and informed decision-making.
                   </p>
                 </div>
               </div>
