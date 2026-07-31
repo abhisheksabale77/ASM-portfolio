@@ -343,7 +343,7 @@ export default function Contact() {
                       value={formData.firstName}
                       onChange={handleChange}
                       required
-                      placeholder="e.g. John"
+                      placeholder="Enter first name"
                       className="w-full font-body bg-[#FAF8F5]/50 border border-soft-border text-[13px] sm:text-sm text-slate-navy rounded-lg px-3.5 sm:px-4 py-3 sm:py-3.5 outline-none transition-colors duration-300 focus:border-muted-gold focus:bg-white focus:shadow-[0_0_15px_rgba(197,160,89,0.06)] hover:border-slate-navy/20"
                     />
                   </div>
@@ -361,7 +361,7 @@ export default function Contact() {
                       value={formData.lastName}
                       onChange={handleChange}
                       required
-                      placeholder="e.g. Doe"
+                      placeholder="Enter last name"
                       className="w-full font-body bg-[#FAF8F5]/50 border border-soft-border text-[13px] sm:text-sm text-slate-navy rounded-lg px-3.5 sm:px-4 py-3 sm:py-3.5 outline-none transition-colors duration-300 focus:border-muted-gold focus:bg-white focus:shadow-[0_0_15px_rgba(197,160,89,0.06)] hover:border-slate-navy/20"
                     />
                   </div>
@@ -389,7 +389,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        placeholder="john@example.com"
+                        placeholder="Enter email"
                         className="w-full font-body bg-[#FAF8F5]/50 border border-soft-border text-[13px] sm:text-sm text-slate-navy rounded-lg pl-10 sm:pl-11 pr-3.5 sm:pr-4 py-3 sm:py-3.5 outline-none transition-colors duration-300 focus:border-muted-gold focus:bg-white focus:shadow-[0_0_15px_rgba(197,160,89,0.06)] hover:border-slate-navy/20"
                       />
                     </div>
@@ -413,7 +413,7 @@ export default function Contact() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+91 98765 43210"
+                        placeholder="Enter phone number"
                         className="w-full font-body bg-[#FAF8F5]/50 border border-soft-border text-[13px] sm:text-sm text-slate-navy rounded-lg pl-10 sm:pl-11 pr-3.5 sm:pr-4 py-3 sm:py-3.5 outline-none transition-colors duration-300 focus:border-muted-gold focus:bg-white focus:shadow-[0_0_15px_rgba(197,160,89,0.06)] hover:border-slate-navy/20"
                       />
                     </div>
