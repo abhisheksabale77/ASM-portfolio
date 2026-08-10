@@ -8,8 +8,8 @@ export default function Hero() {
       {/* Background Wrapper */}
       <div className="absolute inset-0">
         <div
-          className="w-full h-full bg-cover bg-[50%_center] sm:bg-[center_right] md:bg-[40%_center] bg-no-repeat"
-          style={{ backgroundImage: "url('/background_final.png')" }}
+          className="w-full h-full bg-cover bg-[35%_center] sm:bg-[center_right] md:bg-[40%_center] bg-no-repeat"
+          style={{ backgroundImage: "url('/final web.jpeg')" }}
         />
       </div>
 

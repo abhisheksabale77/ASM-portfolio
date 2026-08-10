@@ -143,3 +143,70 @@ body {
 .animate-fade-in {
   animation: fadeIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
+
+/* ─── Premium Timeline Scroll Animations ─── */
+
+/* Mobile & default initial state */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Desktop alternating side entry */
+@media (min-width: 768px) {
+  .timeline-item {
+    transform: translateX(-45px) translateY(15px);
+  }
+
+  .md\:flex-row-reverse > .timeline-item {
+    transform: translateX(45px) translateY(15px);
+  }
+}
+
+/* Activated state when scrolled into view */
+.timeline-item.timeline-reveal-active {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* Dot marker initial state */
+.timeline-dot-marker {
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.timeline-dot-marker > div {
+  transform: scale(0);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.timeline-dot-marker.timeline-reveal-active {
+  opacity: 1;
+}
+
+.timeline-dot-marker.timeline-reveal-active > div {
+  transform: scale(1);
+}
+
+/* Pulsing outer halo for active dot */
+.timeline-dot-marker.timeline-reveal-active > div::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(197, 160, 89, 0.35);
+  animation: timelineHaloPulse 3s ease-in-out infinite;
+}
+
+@keyframes timelineHaloPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}

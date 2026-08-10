@@ -193,24 +193,23 @@ export default function Platforms() {
                   className="bg-white border border-soft-border/60 rounded-xl p-6 md:p-8 flex flex-col sm:flex-row gap-6 items-center hover:shadow-[0_8px_30px_rgba(0,0,0,0.02)] shadow-sm hover:shadow-lg hover:border-muted-gold/40 hover:scale-105 transition duration-300"
                 >
                   {/* Book Cover 3D Flip Card */}
-                  <div 
+                  <div
                     onClick={() => toggleBookFlip(book.title)}
                     className="w-48 h-72 sm:w-52 sm:h-76 relative group shrink-0 perspective-1000 cursor-pointer animate-none"
                   >
-                    <div 
-                      className={`w-full h-full relative preserve-3d book-card-inner transition-transform duration-700 ${
-                        flippedBooks[book.title] ? "[transform:rotateY(-180deg)]" : ""
-                      } group-hover:[transform:rotateY(-180deg)]`}
+                    <div
+                      className={`w-full h-full relative preserve-3d book-card-inner transition-transform duration-700 ${flippedBooks[book.title] ? "[transform:rotateY(-180deg)]" : ""
+                        } group-hover:[transform:rotateY(-180deg)]`}
                       style={{ transformStyle: "preserve-3d" }}
                     >
                       {/* Front Cover */}
-                      <div 
+                      <div
                         className="absolute inset-0 w-full h-full rounded-r-md overflow-hidden shadow-md border border-soft-border/30 backface-hidden"
                         style={{ backfaceVisibility: "hidden" }}
                       >
-                        <Image 
-                          src={book.frontImage} 
-                          alt={`${book.title} Front Cover`} 
+                        <Image
+                          src={book.frontImage}
+                          alt={`${book.title} Front Cover`}
                           fill
                           sizes="(max-width: 640px) 192px, 208px"
                           className="object-cover"
@@ -220,16 +219,16 @@ export default function Platforms() {
                       </div>
 
                       {/* Back Cover */}
-                      <div 
+                      <div
                         className="absolute inset-0 w-full h-full rounded-l-md overflow-hidden shadow-lg border border-soft-border/30 backface-hidden rotate-y-180"
-                        style={{ 
+                        style={{
                           backfaceVisibility: "hidden",
                           transform: "rotateY(180deg)"
                         }}
                       >
-                        <Image 
-                          src={book.backImage} 
-                          alt={`${book.title} Back Cover`} 
+                        <Image
+                          src={book.backImage}
+                          alt={`${book.title} Back Cover`}
                           fill
                           sizes="(max-width: 640px) 192px, 208px"
                           className="object-cover"
@@ -275,7 +274,7 @@ export default function Platforms() {
                   {/* Mobile View: Render native w-full h-full iframe for mobile responsive layout */}
                   <div className="sm:hidden w-full h-full">
                     <iframe
-                      src="https://lifeandlaw.in/"
+                      src="https://www.lifeandlaw.in/"
                       title="Life & Law Blog live scrollable website preview"
                       loading="lazy"
                       className="h-full w-full border-0"
@@ -285,7 +284,7 @@ export default function Platforms() {
                   {/* Live preview on tablet/desktop */}
                   <div className="hidden sm:block w-[125%] h-[125%] origin-top-left scale-[0.8]">
                     <iframe
-                      src="https://lifeandlaw.in/"
+                      src="https://www.lifeandlaw.in/"
                       title="Life & Law Blog live scrollable website preview"
                       loading="lazy"
                       className="h-full w-full border-0"
@@ -310,13 +309,13 @@ export default function Platforms() {
                   </div>
 
                   <Link
-                    href="https://lifeandlaw.in/"
+                    href="https://www.lifeandlaw.in/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-6 font-body inline-flex w-full items-center justify-left text-xs md:text-sm font-semibold text-slate-navy uppercase tracking-wide transition hover:text-muted-gold focus:outline-none focus:ring-2 focus:ring-slate-navy focus:ring-offset-2 group"
+                    className="mt-6 font-body inline-flex w-full items-center justify-left text-xs md:text-sm font-semibold text-slate-navy uppercase tracking-wide transition hover:text-muted-gold group"
                   >
                     Visit Blog Platform
-                    <ArrowRight className="w-4 h-4 ml-1 text-muted-gold translate-y-0.5 group-hover:translate-x-2 transition-transform duration-200"/>
+                    <ArrowRight className="w-4 h-4 ml-1 text-muted-gold translate-y-0.5 group-hover:translate-x-2 transition-transform duration-200" />
                   </Link>
                 </div>
               </article>

@@ -79,7 +79,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href="#contact"
-            className="hidden sm:inline-block bg-muted-gold text-slate-navy font-body text-xs font-bold px-6 py-2.5 rounded-md hover:scale-105 shadow-md shadow-muted-gold/20 transition-[transform,filter] duration-300 hover:brightness-110"
+            className="hidden sm:inline-block bg-muted-gold text-slate-navy font-body text-xs font-bold px-6 py-2.5 text-white rounded-md hover:scale-102 shadow-md shadow-muted-gold/20 transition-all duration-300 hover:brightness-110"
           >
             Contact Us
           </a>

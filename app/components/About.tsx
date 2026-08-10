@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const PRACTICE_AREAS = [
   {
@@ -85,7 +86,112 @@ const PRACTICE_AREAS = [
   },
 ];
 
+const TIMELINE_EVENTS = [
+  {
+    year: "2003",
+    category: "Education & Foundation",
+    title: "LL.B Academic Excellence",
+    description: "Completed legal education with a rigorous focus on constitutional law, civil procedure, and criminal jurisprudence."
+  },
+  {
+    year: "2005",
+    category: "Early Advocacy",
+    title: "Courtroom Mentorship",
+    description: "Trained under distinguished senior advocates, acquiring trial court exposure in complex civil and criminal litigation."
+  },
+  {
+    year: "2008",
+    category: "Official Practice",
+    title: "Bar Council Enrollment",
+    description: "Enrolled as an Advocate with the Bar Council of Maharashtra & Goa, commencing independent legal practice."
+  },
+  {
+    year: "2012",
+    category: "Practice Expansion",
+    title: "Real Estate & Family Law",
+    description: "Expanded core practice to encompass revenue litigation, high-value real estate documentation, and matrimonial dispute resolution."
+  },
+  {
+    year: "2017",
+    category: "Advisory & Corporate",
+    title: "Startup & HNI Consultancy",
+    description: "Established dedicated legal advisory services for startups, early-stage enterprises, HNI investors, and NRI legal compliance."
+  },
+  {
+    year: "2021",
+    category: "Publications & Initiatives",
+    title: "Author & Legal Awareness",
+    description: "Authored legal books ('Life and Law' & 'Magic Mindset') and launched digital legal platforms like KNOW Divorce."
+  },
+  {
+    year: "2024+",
+    category: "21+ Years Milestone",
+    title: "Two Decades of Legal Trust",
+    description: "Continuing legal leadership with a client-first practice built on transparency, meticulous preparation, and proactive guidance."
+  }
+];
+
 export default function About() {
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const progressLineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const timelineEl = timelineRef.current;
+    if (!timelineEl) return;
+
+    const cardEls = timelineEl.querySelectorAll<HTMLElement>(".timeline-item");
+    const dotEls = timelineEl.querySelectorAll<HTMLElement>(".timeline-dot-marker");
+
+    const revealElements = () => {
+      cardEls.forEach((card) => card.classList.add("timeline-reveal-active"));
+      dotEls.forEach((dot) => dot.classList.add("timeline-reveal-active"));
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("timeline-reveal-active");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: "50px 0px 50px 0px" }
+    );
+
+    cardEls.forEach((card) => observer.observe(card));
+    dotEls.forEach((dot) => observer.observe(dot));
+
+    const handleScroll = () => {
+      if (!progressLineRef.current || !timelineEl) return;
+      const rect = timelineEl.getBoundingClientRect();
+      const windowH = window.innerHeight;
+      const top = rect.top;
+      const height = rect.height;
+
+      if (top < windowH && top + height > 0) {
+        const scrolledDistance = windowH - top;
+        const progress = Math.min(Math.max(scrolledDistance / (height + windowH * 0.2), 0), 1);
+        progressLineRef.current.style.height = `${progress * 100}%`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    // Fallback: If for any reason IntersectionObserver doesn't fire after 500ms, reveal cards automatically
+    const timer = setTimeout(() => {
+      handleScroll();
+      revealElements();
+    }, 600);
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section id="about" className="bg-[#FAF8F5] py-15 md:py-20 scroll-mt-20">
       <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
@@ -279,9 +385,127 @@ export default function About() {
               These areas are mentioned only as factual information about the nature of professional work undertaken and should not be understood as a claim of specialization, superiority, or assurance of any result.
             </p>
           </div>
-
         </div>
 
+        {/* ROW 3: Premium Interactive Career Timeline */}
+        <div className="mt-10 bg-white border border-soft-border/60 rounded-[20px] p-6 md:p-10 shadow-[0_4px_30px_rgba(0,0,0,0.015)] relative overflow-hidden">
+          
+          {/* Header */}
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-muted-gold mb-1 block">
+                Career Milestones
+              </span>
+              <h2
+                className="text-lg md:text-2xl text-slate-navy font-bold tracking-wide uppercase"
+                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              >
+                Professional Journey
+              </h2>
+              <div className="h-[2px] w-14 bg-muted-gold mt-2" />
+            </div>
+            <span className="hidden sm:inline-flex items-center gap-2 px-3 py-1 bg-[#FAF8F5] border border-soft-border/60 rounded-full text-xs font-semibold text-slate-navy/70">
+              <span className="w-2 h-2 rounded-full bg-muted-gold animate-pulse" />
+              21+ Years Experience
+            </span>
+          </div>
+
+          {/* Timeline Spine Container */}
+          <div ref={timelineRef} className="relative py-4">
+            
+            {/* Central Spine Track */}
+            <div className="absolute left-4 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-slate-navy/10 rounded-full">
+              {/* Animated Progress Fill Line */}
+              <div
+                ref={progressLineRef}
+                className="w-full bg-gradient-to-b from-muted-gold via-slate-navy to-muted-gold rounded-full transition-[height] duration-150 ease-out shadow-[0_0_8px_rgba(197,160,89,0.4)]"
+                style={{ height: "0%" }}
+              />
+            </div>
+
+            {/* Timeline Items */}
+            <div className="space-y-10 md:space-y-14 relative">
+              {TIMELINE_EVENTS.map((event, index) => {
+                const isEven = index % 2 === 0;
+                return (
+                  <div
+                    key={event.year}
+                    className={`relative flex items-start md:items-center ${
+                      isEven ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
+                  >
+                    {/* Dot Marker on Spine */}
+                    <div
+                      className="timeline-dot-marker absolute left-4 md:left-1/2 -translate-x-1/2 z-10 flex items-center justify-center transition-all duration-700"
+                      style={{ transitionDelay: `${index * 90}ms` }}
+                    >
+                      <div className="w-5 h-5 rounded-full bg-white border-2 border-muted-gold flex items-center justify-center shadow-md group-hover:scale-125 transition-transform duration-300">
+                        <div className="w-2 h-2 rounded-full bg-slate-navy" />
+                      </div>
+                    </div>
+
+                    {/* Milestone Content Card */}
+                    <div
+                      className={`timeline-item ml-12 md:ml-0 md:w-[calc(50%-44px)] ${
+                        isEven ? "md:mr-auto md:pr-2" : "md:ml-auto md:pl-2"
+                      }`}
+                      style={{ transitionDelay: `${index * 110 + 60}ms` }}
+                    >
+                      <div className="group relative bg-[#FAF8F5] border border-soft-border/70 rounded-2xl p-5 md:p-6 hover:bg-white hover:border-muted-gold/50 hover:shadow-xl transition-all duration-500">
+                        
+                        {/* Connector Line on Desktop */}
+                        <div
+                          className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-7 h-[1.5px] bg-gradient-to-r ${
+                            isEven
+                              ? "right-[-28px] from-muted-gold/70 to-transparent"
+                              : "left-[-28px] from-transparent to-muted-gold/70"
+                          }`}
+                        />
+
+                        {/* Top Meta: Year Pill & Category */}
+                        <div className="flex items-center justify-between gap-3 mb-3">
+                          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-navy text-white shadow-sm">
+                            <span className="w-1.5 h-1.5 bg-muted-gold rotate-45" />
+                            <span className="font-heading text-xs font-bold tracking-wider text-muted-gold">
+                              {event.year}
+                            </span>
+                          </div>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-muted-gold/90 bg-muted-gold/10 px-2.5 py-0.5 rounded-md">
+                            {event.category}
+                          </span>
+                        </div>
+
+                        {/* Title */}
+                        <h3
+                          className="text-base md:text-lg font-bold text-slate-navy mb-2 group-hover:text-muted-gold transition-colors duration-300"
+                          style={{ fontFamily: '"Times New Roman", Times, serif' }}
+                        >
+                          {event.title}
+                        </h3>
+
+                        {/* Description */}
+                        <p className="font-body text-xs md:text-sm text-on-surface-variant/80 leading-relaxed text-justify">
+                          {event.description}
+                        </p>
+
+                        {/* Decorative Hover Corners */}
+                        <div className="absolute top-2 right-2 w-3.5 h-3.5 border-t border-r border-muted-gold/30 rounded-tr opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute bottom-2 left-2 w-3.5 h-3.5 border-b border-l border-muted-gold/30 rounded-bl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Bottom End Pin */}
+            <div className="absolute left-4 md:left-1/2 -translate-x-1/2 -bottom-4 z-10 flex items-center justify-center">
+              <div className="w-4 h-4 bg-slate-navy rotate-45 border-2 border-white shadow-md flex items-center justify-center">
+                <div className="w-1.5 h-1.5 bg-muted-gold" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
