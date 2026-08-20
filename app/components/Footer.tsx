@@ -43,7 +43,10 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B1520] text-white border-t border-white/5 scroll-mt-20">
+    <footer
+      data-navbar-color="white"
+      className="bg-[#0B1520] text-white border-t border-white/5 scroll-mt-20"
+    >
       <div className="mx-auto max-w-[1280px] px-8 md:px-12 lg:px-16 pt-16 pb-10 md:pt-20 md:pb-12">
 
         {/* Main Columns Grid */}

@@ -8,16 +8,18 @@ const PRACTICE_AREAS = [
     title: "Civil & Revenue Litigation",
     //subtitle: "Civil & Revenue Litigation",
     image: "/practice/civil_law.png",
+    link: "https://www.asmlegalservices.in/practice-area/civil-litigation",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
       </svg>
     ),
-  }, 
+  },
   {
     title: "Criminal Litigation & White Collar Crimes",
     //subtitle: "Criminal & White-Collar",
     image: "/practice/criminal_law.png",
+    link: "https://www.asmlegalservices.in/practice-area/criminal-law",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122l.852-.852m-.852.852a3.75 3.75 0 11-5.303-5.304 3.75 3.75 0 015.303 5.304zm0 0l6.182-6.182m-6.182 6.182L15 10m-6.182 6.122l-.852.852m.852-.852L15 10m0 0l.852-.852m-.852.852L9.53 16.122M15 10l6.182-6.182m-6.182 6.182l.852-.852" />
@@ -28,6 +30,7 @@ const PRACTICE_AREAS = [
     title: "Matrimonial & Family Disputes",
     //subtitle: "Family & Matrimonial",
     image: "/practice/family_law.png",
+    link: "https://www.asmlegalservices.in/practice-area/matrimonial-family-disputes",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -38,6 +41,7 @@ const PRACTICE_AREAS = [
     title: "Real Estate & Property Law",
     //subtitle: "Real Estate & Revenue",
     image: "/practice/property_law.png",
+    link: "https://www.asmlegalservices.in/practice-area/real-estate-property-law",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M2.25 21h16.5M2.25 21V8.545A.91.91 0 013.159 7.64h13.682c.502 0 .91.408.91.91V21" />
@@ -48,6 +52,7 @@ const PRACTICE_AREAS = [
     title: "Wills, Succession & Estate Planning",
     //subtitle: "Wills & Succession",
     image: "/practice/estate_planning.png",
+    link: "https://www.asmlegalservices.in/practice-area/will-succession",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -58,6 +63,7 @@ const PRACTICE_AREAS = [
     title: "HNI & NRI Legal Services",
     //subtitle: "Mediation & ADR",
     image: "/practice/HNI_RNI.png",
+    link: "https://www.asmlegalservices.in/practice-area/hni-nri",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
@@ -68,6 +74,7 @@ const PRACTICE_AREAS = [
     title: "Startup & Early Stage Companies",
     //subtitle: "Startup Support",
     image: "/practice/corporate_law.png",
+    link: "https://www.asmlegalservices.in/practice-area/corporate-law",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 .994-.806 1.8-1.8 1.8H5.55c-.994 0-1.8-.806-1.8-1.8v-4.25m16.5 0a2.25 2.25 0 00.375-1.255v-2.208a2.25 2.25 0 00-2.25-2.25H5.625a2.25 2.25 0 00-2.25 2.25v2.208c0 .482.152.946.375 1.255m16.5 0c-.22.29-.53.51-.88.63a23.956 23.956 0 01-15.24 0 2.228 2.228 0 01-.88-.63M16.5 7.5V6a2.25 2.25 0 00-2.25-2.25h-4.5A2.25 2.25 0 007.5 6v1.5m9 0h-9" />
@@ -78,6 +85,7 @@ const PRACTICE_AREAS = [
     title: "Conveyancing & Documentation Services",
     //subtitle: "Conveyance & Deeds",
     image: "/practice/documentation.png",
+    link: "https://www.asmlegalservices.in/practice-area/documentation",
     icon: (
       <svg className="w-5 h-5 text-muted-gold" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
@@ -125,7 +133,7 @@ const TIMELINE_EVENTS = [
   },
   {
     year: "2024+",
-    category: "21+ Years Milestone",
+    category: "20+ Years Milestone",
     title: "Two Decades of Legal Trust",
     description: "Continuing legal leadership with a client-first practice built on transparency, meticulous preparation, and proactive guidance."
   }
@@ -193,9 +201,13 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="bg-[#FAF8F5] py-15 md:py-20 scroll-mt-20">
+    <section
+      id="about"
+      data-navbar-color="black"
+      className="bg-[#FAF8F5] py-15 md:py-20 scroll-mt-20"
+    >
       <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
-        
+
         {/* Decorative Section Header */}
         <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 mb-10 select-none">
           <div className="flex items-center gap-2 grow">
@@ -215,7 +227,7 @@ export default function About() {
 
         {/* ROW 1: Profile Card & About Card Side-by-Side */}
         <div className="grid lg:grid-cols-12 gap-6 items-stretch mb-10">
-          
+
           {/* LEFT COLUMN: Advocate Profile Card */}
           <div className="lg:col-span-5 flex relative">
             <div className="w-full bg-white border border-soft-border/60 rounded-[20px] p-5 md:p-6 flex flex-col items-center justify-between shadow-[0_4px_30px_rgba(0,0,0,0.015)] overflow-hidden relative">
@@ -258,7 +270,7 @@ export default function About() {
 
                 {/* Experience Badge */}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white border border-muted-gold/55 flex flex-col items-center justify-center shadow-md z-10 select-none">
-                  <span className="font-heading text-xs font-bold text-slate-navy leading-none">21+</span>
+                  <span className="font-heading text-xs font-bold text-slate-navy leading-none">20+</span>
                   <span className="font-body text-[6px] font-bold uppercase tracking-wider text-muted-gold/80 mt-0.5">Years</span>
                 </div>
               </div>
@@ -287,7 +299,7 @@ export default function About() {
                 </p>
               </div>
 
-            
+
 
             </div>
           </div>
@@ -295,7 +307,7 @@ export default function About() {
           {/* RIGHT COLUMN: About Card */}
           <div className="lg:col-span-7 flex">
             <div className="w-full bg-white border border-soft-border/60 rounded-[20px] p-6 md:p-8 flex flex-col justify-between shadow-[0_4px_30px_rgba(0,0,0,0.015)] relative">
-              
+
               {/* Pointed Ribbon */}
               <div
                 className="absolute top-0 right-8 w-7.5 h-10 bg-[#0B1520] flex flex-col items-center justify-center shadow-md rounded-b-sm z-10"
@@ -310,13 +322,13 @@ export default function About() {
                 <div className="h-[2px] w-12 bg-muted-gold mb-5" />
                 <div className="space-y-4 text-justify font-body text-on-surface-variant font-medium text-xs md:text-base leading-4.5 md:leading-6">
                   <p>
-                    Adv. Abdul Mulla’s professional work includes litigation, property and real estate matters, family disputes, wills and succession, conveyancing, documentation, and advisory support for individuals, startups, early stage companies and organisations. 
+                    Adv. Abdul Mulla’s professional work includes litigation, property and real estate matters, family disputes, wills and succession, conveyancing, documentation, and advisory support for individuals, startups, early stage companies and organisations.
                   </p>
                   <p>
                     His practice is centred on understanding each client’s objective, addressing the matter with clarity and responsibility and proactively identifying steps that may help prevent future legal complications.
                   </p>
                   <p>
-                    With an emphasis on careful preparation and clear communication, every matter is approached by first understanding the client’s objective, addressing the immediate concern and considering steps that may help prevent future legal complications. 
+                    With an emphasis on careful preparation and clear communication, every matter is approached by first understanding the client’s objective, addressing the immediate concern and considering steps that may help prevent future legal complications.
                   </p>
                   <p>
                     The practice also seeks to create and maintain trustworthy professional relationships founded on transparency, mutual respect, responsible guidance and informed decision-making.
@@ -346,9 +358,12 @@ export default function About() {
           {/* Cards Grid with Images */}
           <div className="grid text-center grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-6">
             {PRACTICE_AREAS.map((item) => (
-              <div
+              <a
                 key={item.title}
-                className="group bg-[#FAF8F5] border border-soft-border/60 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-[#FAF8F5] border border-soft-border/60 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:border-muted-gold/60 transition-all duration-300 flex flex-col cursor-pointer"
               >
                 {/* Practice Area Thumbnail Image */}
                 <div className="relative w-full aspect-[4/5] overflow-hidden bg-slate-navy">
@@ -360,7 +375,7 @@ export default function About() {
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-navy/40 via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-300" />
-                  
+
                   {/* Icon Badge */}
                   <div className="absolute top-3 right-3 p-1.5 bg-slate-navy/80 backdrop-blur-sm border border-white/20 rounded-lg flex items-center justify-center shadow-md">
                     {item.icon}
@@ -375,7 +390,7 @@ export default function About() {
                     </h3>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
@@ -384,126 +399,6 @@ export default function About() {
             <p className="font-body text-[11px] md:text-xs text-on-surface-variant/90 leading-relaxed italic text-center">
               These areas are mentioned only as factual information about the nature of professional work undertaken and should not be understood as a claim of specialization, superiority, or assurance of any result.
             </p>
-          </div>
-        </div>
-
-        {/* ROW 3: Premium Interactive Career Timeline */}
-        <div className="mt-10 bg-white border border-soft-border/60 rounded-[20px] p-6 md:p-10 shadow-[0_4px_30px_rgba(0,0,0,0.015)] relative overflow-hidden">
-          
-          {/* Header */}
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-muted-gold mb-1 block">
-                Career Milestones
-              </span>
-              <h2
-                className="text-lg md:text-2xl text-slate-navy font-bold tracking-wide uppercase"
-                style={{ fontFamily: '"Times New Roman", Times, serif' }}
-              >
-                Professional Journey
-              </h2>
-              <div className="h-[2px] w-14 bg-muted-gold mt-2" />
-            </div>
-            <span className="hidden sm:inline-flex items-center gap-2 px-3 py-1 bg-[#FAF8F5] border border-soft-border/60 rounded-full text-xs font-semibold text-slate-navy/70">
-              <span className="w-2 h-2 rounded-full bg-muted-gold animate-pulse" />
-              21+ Years Experience
-            </span>
-          </div>
-
-          {/* Timeline Spine Container */}
-          <div ref={timelineRef} className="relative py-4">
-            
-            {/* Central Spine Track */}
-            <div className="absolute left-4 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-slate-navy/10 rounded-full">
-              {/* Animated Progress Fill Line */}
-              <div
-                ref={progressLineRef}
-                className="w-full bg-gradient-to-b from-muted-gold via-slate-navy to-muted-gold rounded-full transition-[height] duration-150 ease-out shadow-[0_0_8px_rgba(197,160,89,0.4)]"
-                style={{ height: "0%" }}
-              />
-            </div>
-
-            {/* Timeline Items */}
-            <div className="space-y-10 md:space-y-14 relative">
-              {TIMELINE_EVENTS.map((event, index) => {
-                const isEven = index % 2 === 0;
-                return (
-                  <div
-                    key={event.year}
-                    className={`relative flex items-start md:items-center ${
-                      isEven ? "md:flex-row" : "md:flex-row-reverse"
-                    }`}
-                  >
-                    {/* Dot Marker on Spine */}
-                    <div
-                      className="timeline-dot-marker absolute left-4 md:left-1/2 -translate-x-1/2 z-10 flex items-center justify-center transition-all duration-700"
-                      style={{ transitionDelay: `${index * 90}ms` }}
-                    >
-                      <div className="w-5 h-5 rounded-full bg-white border-2 border-muted-gold flex items-center justify-center shadow-md group-hover:scale-125 transition-transform duration-300">
-                        <div className="w-2 h-2 rounded-full bg-slate-navy" />
-                      </div>
-                    </div>
-
-                    {/* Milestone Content Card */}
-                    <div
-                      className={`timeline-item ml-12 md:ml-0 md:w-[calc(50%-44px)] ${
-                        isEven ? "md:mr-auto md:pr-2" : "md:ml-auto md:pl-2"
-                      }`}
-                      style={{ transitionDelay: `${index * 110 + 60}ms` }}
-                    >
-                      <div className="group relative bg-[#FAF8F5] border border-soft-border/70 rounded-2xl p-5 md:p-6 hover:bg-white hover:border-muted-gold/50 hover:shadow-xl transition-all duration-500">
-                        
-                        {/* Connector Line on Desktop */}
-                        <div
-                          className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-7 h-[1.5px] bg-gradient-to-r ${
-                            isEven
-                              ? "right-[-28px] from-muted-gold/70 to-transparent"
-                              : "left-[-28px] from-transparent to-muted-gold/70"
-                          }`}
-                        />
-
-                        {/* Top Meta: Year Pill & Category */}
-                        <div className="flex items-center justify-between gap-3 mb-3">
-                          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-navy text-white shadow-sm">
-                            <span className="w-1.5 h-1.5 bg-muted-gold rotate-45" />
-                            <span className="font-heading text-xs font-bold tracking-wider text-muted-gold">
-                              {event.year}
-                            </span>
-                          </div>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-muted-gold/90 bg-muted-gold/10 px-2.5 py-0.5 rounded-md">
-                            {event.category}
-                          </span>
-                        </div>
-
-                        {/* Title */}
-                        <h3
-                          className="text-base md:text-lg font-bold text-slate-navy mb-2 group-hover:text-muted-gold transition-colors duration-300"
-                          style={{ fontFamily: '"Times New Roman", Times, serif' }}
-                        >
-                          {event.title}
-                        </h3>
-
-                        {/* Description */}
-                        <p className="font-body text-xs md:text-sm text-on-surface-variant/80 leading-relaxed text-justify">
-                          {event.description}
-                        </p>
-
-                        {/* Decorative Hover Corners */}
-                        <div className="absolute top-2 right-2 w-3.5 h-3.5 border-t border-r border-muted-gold/30 rounded-tr opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <div className="absolute bottom-2 left-2 w-3.5 h-3.5 border-b border-l border-muted-gold/30 rounded-bl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Bottom End Pin */}
-            <div className="absolute left-4 md:left-1/2 -translate-x-1/2 -bottom-4 z-10 flex items-center justify-center">
-              <div className="w-4 h-4 bg-slate-navy rotate-45 border-2 border-white shadow-md flex items-center justify-center">
-                <div className="w-1.5 h-1.5 bg-muted-gold" />
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -1,31 +1,37 @@
 const AREAS = [
   {
     title: "Civil Litigation",
+    link: "https://www.asmlegalservices.in/practice-area/civil-litigation",
     description:
       "Strategic representation in complex civil disputes, ensuring robust advocacy across trial and appellate courts.",
   },
   {
     title: "Property Law",
+    link: "https://www.asmlegalservices.in/practice-area/real-estate-property-law",
     description:
       "Navigating intricate real estate transactions, title disputes, and land revenue matters with precision.",
   },
   {
     title: "Family Law",
+    link: "https://www.asmlegalservices.in/practice-area/matrimonial-family-disputes",
     description:
       "Compassionate yet firm counsel in matrimonial disputes, custody, and complex family asset divisions.",
   },
   {
     title: "White-Collar Crime",
+    link: "https://www.asmlegalservices.in/practice-area/criminal-law",
     description:
       "Discreet and aggressive defense strategies for corporate entities and individuals facing economic offenses.",
   },
   {
     title: "Will & Succession",
+    link: "https://www.asmlegalservices.in/practice-area/will-succession",
     description:
       "Meticulous estate planning, drafting of testaments, and navigating the nuances of succession laws.",
   },
   {
     title: "Corporate Support",
+    link: "https://www.asmlegalservices.in/practice-area/corporate-law",
     description:
       "Foundational legal structuring, compliance, and advisory services tailored for modern startups and enterprises.",
   },
@@ -41,13 +47,16 @@ export default function PracticeAreas() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {AREAS.map((area) => (
-            <div
+            <a
               key={area.title}
-              className="bg-parchment border border-soft-border rounded p-8 hover:shadow-tinted transition-shadow"
+              href={area.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-parchment border border-soft-border rounded p-8 hover:shadow-tinted transition-shadow cursor-pointer block"
             >
               <h3 className="headline-sm text-slate-navy mb-3">{area.title}</h3>
               <p className="body-md text-on-surface-variant">{area.description}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

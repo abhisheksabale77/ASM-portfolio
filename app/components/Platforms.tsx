@@ -28,14 +28,14 @@ const BOOKS = [
   {
     title: "Life and Law",
     description: "Life and Law – Legal Guide for Everyone is a legal awareness book written for laymen. The book contains 101 articles that explain practical legal issues connected with day-to-day life in simple and understandable language. The purpose of this book is to help readers understand basic legal concepts, common legal situations, rights, responsibilities, documentation concerns, family and property-related issues, and other practical legal topics that may arise in everyday life.",
-    cta: "Purchase Book",
+    cta: "Coming Soon",
     frontImage: "/LifeLaw_front.jpeg",
     backImage: "/LifeLaw_back.jpeg",
   },
   {
     title: "Magic Mindset",
     description: "Magic Mindset is a self-help and personal development book focused on personal growth, clarity of thought, discipline, decision-making, confidence, and practical life improvement. The book is written to help readers develop a positive and growth-oriented mindset. It encourages individuals to improve their thinking patterns, overcome limitations, build inner strength, and move forward in personal and professional life with better clarity and purpose.",
-    cta: "Purchase Book",
+    cta: "Coming Soon",
     frontImage: "/MagicMindset_front.jpeg",
     backImage: "/MagicMindset_back.jpeg",
   },
@@ -70,7 +70,11 @@ export default function Platforms() {
   }, []);
 
   return (
-    <section id="platforms" className="bg-white scroll-mt-20 py-20 md:py-24">
+    <section
+      id="platforms"
+      data-navbar-color="black"
+      className="bg-white scroll-mt-20 py-20 md:py-24"
+    >
       <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
 
         <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 mb-12 select-none">
@@ -93,9 +97,6 @@ export default function Platforms() {
         <div className="max-w-3xl mx-auto text-center mb-14 px-4">
           <p className="font-serif italic text-lg md:text-2xl text-muted-gold mb-3">
             “ An idea has the power to inform a mind and inspire a change ”
-          </p>
-          <p className="font-body text-xs md:text-sm text-on-surface-variant/75 leading-relaxed max-w-lg mx-auto">
-            Democratizing legal awareness through simplified digital resources, publications, and insightful articles designed to empower citizens.
           </p>
         </div>
 
@@ -128,7 +129,7 @@ export default function Platforms() {
                   key={p.title}
                   className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:shadow-xl hover:scale-105 flex flex-col justify-between"
                 >
-                  {/* Scrollable Live Website Preview Frame */}
+                  {/* Interactive Live Website Preview Frame */}
                   <div className="relative h-[240px] sm:h-[300px] md:h-[320px] w-full overflow-hidden bg-slate-100 border-b border-slate-200 isolate">
                     {/* Mobile View: Render native w-full h-full iframe for mobile responsive layout */}
                     <div className="sm:hidden w-full h-full">
@@ -152,13 +153,18 @@ export default function Platforms() {
                     </div>
                   </div>
 
-                  {/* Card content */}
-                  <div className="p-7 flex flex-col justify-between grow">
+                  {/* Clickable Card content */}
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group p-7 flex flex-col justify-between grow cursor-pointer block hover:bg-slate-50/50 transition-colors"
+                  >
                     <div>
                       <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-gold mb-1 block">
                         {p.subtitle}
                       </span>
-                      <h3 className="text-xl font-bold text-slate-navy font-serif">
+                      <h3 className="text-xl font-bold text-slate-navy font-serif transition-colors">
                         {p.title}
                       </h3>
 
@@ -167,18 +173,13 @@ export default function Platforms() {
                       </p>
                     </div>
 
-                    <Link
-                      href={p.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-6 font-body text-xs font-bold text-slate-navy hover:text-muted-gold transition-colors inline-flex items-center gap-1.5 uppercase tracking-widest group"
-                    >
+                    <div className="mt-6 font-body text-xs font-bold text-slate-navy group-hover:text-muted-gold transition-colors inline-flex items-center gap-1.5 uppercase tracking-widest">
                       {p.cta}
                       <svg className="w-4 h-4 text-muted-gold group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
-                    </Link>
-                  </div>
+                    </div>
+                  </a>
                 </article>
               ))}
             </div>
@@ -269,7 +270,7 @@ export default function Platforms() {
           {activeTab === "blogger" && (
             <div className="flex justify-center animate-fade-in">
               <article className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:scale-105 hover:shadow-xl flex flex-col justify-between w-full max-w-[650px]">
-                {/* Scrollable Live Website preview */}
+                {/* Interactive Live Website preview */}
                 <div className="relative h-[260px] sm:h-[340px] md:h-[360px] w-full overflow-hidden bg-slate-100 border-b border-slate-200 isolate">
                   {/* Mobile View: Render native w-full h-full iframe for mobile responsive layout */}
                   <div className="sm:hidden w-full h-full">
@@ -293,13 +294,18 @@ export default function Platforms() {
                   </div>
                 </div>
 
-                {/* Card content */}
-                <div className="p-7 md:p-8 flex flex-col justify-between grow">
+                {/* Clickable Card content */}
+                <a
+                  href="https://www.lifeandlaw.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-7 md:p-8 flex flex-col justify-between grow cursor-pointer block hover:bg-slate-50/50 transition-colors"
+                >
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-widest text-muted-gold mb-1 block">
                       Legal Insights & Articles
                     </span>
-                    <h3 className="text-2xl font-bold text-slate-navy font-serif">
+                    <h3 className="text-2xl font-bold text-slate-navy font-serif transition-colors">
                       Life &amp; Law Blog
                     </h3>
 
@@ -308,16 +314,11 @@ export default function Platforms() {
                     </p>
                   </div>
 
-                  <Link
-                    href="https://www.lifeandlaw.in/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 font-body inline-flex w-full items-center justify-left text-xs md:text-sm font-semibold text-slate-navy uppercase tracking-wide transition hover:text-muted-gold group"
-                  >
+                  <div className="mt-6 font-body inline-flex w-full items-center justify-left text-xs md:text-sm font-semibold text-slate-navy uppercase tracking-wide transition group-hover:text-muted-gold">
                     Visit Blog Platform
                     <ArrowRight className="w-4 h-4 ml-1 text-muted-gold translate-y-0.5 group-hover:translate-x-2 transition-transform duration-200" />
-                  </Link>
-                </div>
+                  </div>
+                </a>
               </article>
             </div>
           )}

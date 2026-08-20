@@ -4,7 +4,11 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-[600px] md:min-h-[750px] flex items-center overflow-hidden">
+    <section
+      id="hero"
+      data-navbar-color="white"
+      className="relative min-h-[600px] md:min-h-[750px] flex items-center overflow-hidden"
+    >
       {/* Background Wrapper */}
       <div className="absolute inset-0">
         <div
@@ -36,7 +40,7 @@ export default function Hero() {
           </p>
 
           <p className="max-w-[330px] sm:max-w-[500px] font-body text-xs sm:text-sm md:text-base text-justify text-white/95 mb-8 sm:mb-10 leading-relaxed text-left drop-shadow">
-            Advocate at work, author at heart, blogger with purpose.  
+            Advocate at work, author at heart, blogger with purpose.
             Sharing knowledge to inform minds and strengthen awareness.
           </p>
 

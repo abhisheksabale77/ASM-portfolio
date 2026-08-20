@@ -90,6 +90,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
+      data-navbar-color="black"
       className="relative bg-[#FAF8F5] scroll-mt-20 py-14 sm:py-18 md:py-24 overflow-hidden"
     >
       {/* Premium Background Ornaments */}
@@ -137,7 +138,7 @@ export default function Contact() {
             “ Professional legal representation & clear advice ”
           </p>
           <p className="font-body text-[11px] sm:text-xs md:text-sm text-on-surface-variant/75 leading-relaxed max-w-lg mx-auto">
-            Schedule an appointment, ask a query, or request assistance. Every communication is handled with professional privilege, absolute confidentiality, and standard-of-care precision.
+            Schedule an appointment, ask a query or request assistance. Every communication is handled with professional privilege, absolute confidentiality and standard-of-care precision.
           </p>
         </div>
 
@@ -147,14 +148,14 @@ export default function Contact() {
           {/* LEFT COLUMN: Interactive Sliding Card Container */}
           <div
             onClick={() => setIsCardActive(!isCardActive)}
+            data-navbar-color="white"
             className={`lg:col-span-5 group relative min-h-[480px] h-full rounded-2xl sm:rounded-[20px] overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-[opacity,transform] duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
             {/* FRONT SIDE (Forest Green Theme) */}
             <div
-              className={`w-full h-full min-h-[480px] p-6 sm:p-8 md:p-10 bg-gradient-to-br from-[#112A1D] via-[#0E2017] to-[#08130E] border border-muted-gold/25 shadow-[0_8px_30px_rgba(0,0,0,0.15)] flex flex-col justify-between overflow-hidden transition-all duration-500 ${
-                isCardActive ? "blur-sm scale-[0.98] opacity-10" : ""
-              } group-hover:blur-sm group-hover:scale-[0.98] group-hover:opacity-10`}
+              className={`w-full h-full min-h-[480px] p-6 sm:p-8 md:p-10 bg-gradient-to-br from-[#112A1D] via-[#0E2017] to-[#08130E] border border-muted-gold/25 shadow-[0_8px_30px_rgba(0,0,0,0.15)] flex flex-col justify-between overflow-hidden transition-all duration-500 ${isCardActive ? "blur-sm scale-[0.98] opacity-10" : ""
+                } group-hover:blur-sm group-hover:scale-[0.98] group-hover:opacity-10`}
             >
               {/* Background accent glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-muted-gold/[0.08] via-transparent to-transparent opacity-70" />
@@ -205,11 +206,10 @@ export default function Contact() {
 
             {/* BACK SIDE (Dark Theme - Contact Details Frosted Blur Reveal) */}
             <div
-              className={`absolute inset-0 w-full h-full p-6 sm:p-8 md:p-10 bg-[#0B1520]/95 backdrop-blur-md text-white border border-white/10 shadow-[0_8px_40px_rgba(11,21,32,0.12)] flex flex-col justify-between overflow-hidden transition-all duration-500 ${
-                isCardActive
+              className={`absolute inset-0 w-full h-full p-6 sm:p-8 md:p-10 bg-[#0B1520]/95 backdrop-blur-md text-white border border-white/10 shadow-[0_8px_40px_rgba(11,21,32,0.12)] flex flex-col justify-between overflow-hidden transition-all duration-500 ${isCardActive
                   ? "opacity-100 pointer-events-auto scale-100"
                   : "opacity-0 pointer-events-none scale-95"
-              } group-hover:opacity-100 group-hover:pointer-events-auto group-hover:scale-100 z-20`}
+                } group-hover:opacity-100 group-hover:pointer-events-auto group-hover:scale-100 z-20`}
             >
               {/* Background accent glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-muted-gold/[0.06] via-transparent to-transparent opacity-70" />

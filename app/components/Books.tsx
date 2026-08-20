@@ -3,13 +3,13 @@ const BOOKS = [
     title: "Life and Law",
     description:
       "An insightful exploration into the intersection of daily life and legal principles. This book breaks down complex legal jargon into understandable concepts, empowering readers with practical legal knowledge for everyday situations.",
-    cta: "Purchase Book",
+    cta: "Coming Soon",
   },
   {
     title: "Magic Mindset",
     description:
       "A transformative guide focusing on mental resilience, strategic thinking, and emotional intelligence. Drawing from years of high-pressure legal experience, it offers actionable strategies to cultivate a mindset geared for success and peace.",
-    cta: "Purchase Book",
+    cta: "Coming Soon",
   },
 ];
 

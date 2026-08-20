@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useNavbarColor } from "../hooks/useNavbarColor";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -14,35 +14,24 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const navbarRef = useRef<HTMLDivElement>(null);
+  const navbarColor = useNavbarColor(navbarRef, { defaultColor: "white" });
 
-  useEffect(() => {
-    const heroSection = document.getElementById("hero");
-    if (!heroSection) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // When hero is NOT intersecting (scrolled past it), switch to navy blue
-        setScrolled(!entry.isIntersecting);
-      },
-      {
-        // Trigger when the bottom edge of the hero leaves the viewport
-        threshold: 0,
-        rootMargin: "-80px 0px 0px 0px", // account for navbar height
-      }
-    );
-
-    observer.observe(heroSection);
-    return () => observer.disconnect();
-  }, []);
+  // navbarColor === "black" means background is light (needs dark text/logo)
+  // navbarColor === "white" means background is dark (needs white text/logo)
+  const isDarkText = navbarColor === "black";
 
   return (
-    <div className="fixed top-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[1300px] z-50">
+    <div
+      ref={navbarRef}
+      className="fixed top-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[1300px] z-50 pointer-events-none"
+    >
       <header
-        className={`w-full transition-colors duration-300 rounded-xl px-4 sm:px-8 md:px-12 py-4 flex items-center justify-between border ${scrolled
-          ? "backdrop-blur-sm bg-white/5 border-muted-gold/10 text-slate-navy"
-          : "bg-transparent backdrop-blur-sm border-white/10 text-white"
-          }`}
+        className={`w-full transition-all duration-300 rounded-xl px-4 sm:px-8 md:px-12 py-4 flex items-center justify-between border pointer-events-auto ${
+          isDarkText
+            ? "backdrop-blur-3xl bg-white/5 border-muted-gold/10 text-slate-navy"
+            : "bg-transparent backdrop-blur-sm border-white/10 text-white"
+        }`}
       >
         {/* Logo Section */}
         <Link href="/" className="flex items-center gap-3 group">
@@ -53,7 +42,7 @@ export default function Navbar() {
             height={40}
             style={{ width: "auto" }}
             className={`h-8 sm:h-9 md:h-10 w-auto object-contain transition-all duration-300 ${
-              scrolled ? "brightness-0 drop-shadow" : "brightness-0 invert"
+              isDarkText ? "brightness-0 drop-shadow" : "brightness-0 invert"
             }`}
             priority
           />
@@ -65,10 +54,11 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className={`border px-4 py-1.5 rounded-md text-[11px] font-semibold uppercase tracking-wider transition-colors duration-300 ${scrolled
+              className={`border px-4 py-1.5 rounded-md text-[11px] font-semibold uppercase tracking-wider transition-colors duration-300 ${
+                isDarkText
                   ? "border-slate-navy/15 text-slate-navy/90 hover:text-slate-navy hover:bg-slate-navy/5 hover:border-slate-navy/30"
                   : "border-white/15 text-white/95 hover:text-white hover:bg-white/5 hover:border-white/40"
-                }`}
+              }`}
             >
               {link.label}
             </a>
@@ -87,10 +77,11 @@ export default function Navbar() {
           {/* Mobile Toggle Button */}
           <button
             onClick={() => setOpen(!open)}
-            className={`md:hidden p-2 rounded-full transition-all duration-300 active:scale-90 ${scrolled
+            className={`md:hidden p-2 rounded-full transition-all duration-300 active:scale-90 ${
+              isDarkText
                 ? "text-slate-navy hover:bg-slate-navy/5"
                 : "text-white/90 hover:text-white hover:bg-white/5"
-              }`}
+            }`}
             aria-label="Toggle menu"
           >
             <div className="relative w-6 h-6 flex items-center justify-center">
@@ -118,11 +109,10 @@ export default function Navbar() {
 
       {/* Floating Dark Glass Mobile Menu with Smooth Slide & Fade Animation */}
       <nav
-        className={`absolute top-20 left-0 right-0 md:hidden bg-gradient-to-b from-slate-navy/90 via-slate-navy/85 to-slate-navy/80 backdrop-blur-2xl border border-white/15 rounded-2xl p-6 flex flex-col gap-3 shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-300 ease-out origin-top ${
-          open
+        className={`absolute top-20 left-0 right-0 md:hidden bg-gradient-to-b from-slate-navy/90 via-slate-navy/85 to-slate-navy/80 backdrop-blur-2xl border border-white/15 rounded-2xl p-6 flex flex-col gap-3 shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-300 ease-out origin-top ${open
             ? "opacity-100 scale-100 translate-y-0 pointer-events-auto visible"
             : "opacity-0 scale-95 -translate-y-4 pointer-events-none invisible"
-        }`}
+          }`}
       >
         {NAV_LINKS.map((link, index) => (
           <a
@@ -132,9 +122,8 @@ export default function Navbar() {
             style={{
               transitionDelay: open ? `${index * 50 + 75}ms` : "0ms",
             }}
-            className={`border border-white/10 hover:border-white/40 text-center py-2.5 rounded-full text-xs font-semibold text-white/90 hover:bg-white/10 active:scale-98 transition-all duration-300 ${
-              open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
-            }`}
+            className={`border border-white/10 hover:border-white/40 text-center py-2.5 rounded-full text-xs font-semibold text-white/90 hover:bg-white/10 active:scale-98 transition-all duration-300 ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+              }`}
           >
             {link.label}
           </a>
@@ -145,9 +134,8 @@ export default function Navbar() {
           style={{
             transitionDelay: open ? `${NAV_LINKS.length * 50 + 75}ms` : "0ms",
           }}
-          className={`bg-gradient-to-r from-muted-gold via-amber-500 to-muted-gold text-center text-slate-navy py-3 rounded-full text-xs font-bold mt-2 hover:brightness-110 active:scale-98 transition-all duration-300 shadow-md shadow-muted-gold/20 ${
-            open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
-          }`}
+          className={`bg-gradient-to-r from-muted-gold via-amber-500 to-muted-gold text-center text-slate-navy py-3 rounded-full text-xs font-bold mt-2 hover:brightness-110 active:scale-98 transition-all duration-300 shadow-md shadow-muted-gold/20 ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+            }`}
         >
           Contact Us
         </a>

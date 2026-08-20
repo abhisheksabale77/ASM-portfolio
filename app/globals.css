@@ -151,7 +151,7 @@ body {
   opacity: 0;
   transform: translateY(32px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Desktop alternating side entry */
@@ -160,7 +160,7 @@ body {
     transform: translateX(-45px) translateY(15px);
   }
 
-  .md\:flex-row-reverse > .timeline-item {
+  .md\:flex-row-reverse>.timeline-item {
     transform: translateX(45px) translateY(15px);
   }
 }
@@ -177,7 +177,7 @@ body {
   transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.timeline-dot-marker > div {
+.timeline-dot-marker>div {
   transform: scale(0);
   transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -186,12 +186,12 @@ body {
   opacity: 1;
 }
 
-.timeline-dot-marker.timeline-reveal-active > div {
+.timeline-dot-marker.timeline-reveal-active>div {
   transform: scale(1);
 }
 
 /* Pulsing outer halo for active dot */
-.timeline-dot-marker.timeline-reveal-active > div::after {
+.timeline-dot-marker.timeline-reveal-active>div::after {
   content: "";
   position: absolute;
   inset: -6px;
@@ -201,10 +201,13 @@ body {
 }
 
 @keyframes timelineHaloPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.3;
     transform: scale(0.9);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.15);
