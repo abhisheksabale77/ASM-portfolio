@@ -8,8 +8,8 @@ export default function Hero() {
       {/* Background Wrapper */}
       <div className="absolute inset-0">
         <div
-          className="w-full h-full bg-cover bg-[35%_center] sm:bg-[center_right] md:bg-[40%_center] bg-no-repeat"
-          style={{ backgroundImage: "url('/final web.jpeg')" }}
+          className="w-full h-full bg-cover bg-[65%_center] sm:bg-[center_right] md:bg-[65%_center] bg-no-repeat"
+          style={{ backgroundImage: "url('/backgroundImage.png')" }}
         />
       </div>
 
@@ -25,13 +25,13 @@ export default function Hero() {
           </div>
 
           <h1
-            className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-5 drop-shadow-md"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-5 drop-shadow-md"
             style={{ fontFamily: '"Times New Roman", Times, serif', fontWeight: 700 }}
           >
             Adv. Abdul Mulla
           </h1>
 
-          <p className="text-[7px] sm:text-[11px] md:text-xs tracking-[0.1em] text-muted-gold bg-muted-gold/20 mb-6 border border-muted-gold py-1.5 px-3 rounded-sm font-semibold backdrop-blur-sm uppercase">
+          <p className="text-[6px] sm:text-[11px] md:text-xs tracking-[0.1em] text-muted-gold bg-muted-gold/20 mb-6 border border-muted-gold py-1.5 px-3 rounded-sm font-semibold backdrop-blur-sm uppercase">
             Advocate | Author | Blogger | Legal Awareness Contributor
           </p>
 
