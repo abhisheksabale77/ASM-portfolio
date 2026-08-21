@@ -4,11 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      data-navbar-color="white"
-      className="relative min-h-[600px] md:min-h-[750px] flex items-center overflow-hidden"
-    >
+    <section id="hero" data-nav-theme="dark" className="relative min-h-[600px] md:min-h-[750px] flex items-center overflow-hidden">
       {/* Background Wrapper */}
       <div className="absolute inset-0">
         <div

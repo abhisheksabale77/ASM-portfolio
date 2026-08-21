@@ -89,8 +89,8 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      data-nav-theme="light"
       ref={sectionRef}
-      data-navbar-color="black"
       className="relative bg-[#FAF8F5] scroll-mt-20 py-14 sm:py-18 md:py-24 overflow-hidden"
     >
       {/* Premium Background Ornaments */}
@@ -148,7 +148,6 @@ export default function Contact() {
           {/* LEFT COLUMN: Interactive Sliding Card Container */}
           <div
             onClick={() => setIsCardActive(!isCardActive)}
-            data-navbar-color="white"
             className={`lg:col-span-5 group relative min-h-[480px] h-full rounded-2xl sm:rounded-[20px] overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-[opacity,transform] duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
@@ -181,7 +180,7 @@ export default function Contact() {
                     priority
                   />
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border border-muted-gold/30 bg-muted-gold/[0.08] flex flex-col items-center justify-center transition-transform duration-500 group-hover:scale-105 select-none shrink-0">
-                    <span className="font-heading text-base sm:text-lg font-bold text-muted-gold leading-none">21+</span>
+                    <span className="font-heading text-base sm:text-lg font-bold text-muted-gold leading-none">20+</span>
                     <span className="font-body text-[7px] sm:text-[8px] font-bold uppercase tracking-wider text-muted-gold/80 mt-0.5">Years Exp</span>
                   </div>
                 </div>

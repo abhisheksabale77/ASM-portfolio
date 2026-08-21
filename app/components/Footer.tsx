@@ -43,10 +43,7 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer
-      data-navbar-color="white"
-      className="bg-[#0B1520] text-white border-t border-white/5 scroll-mt-20"
-    >
+    <footer data-nav-theme="dark" className="bg-[#0B1520] text-white border-t border-white/5 scroll-mt-20">
       <div className="mx-auto max-w-[1280px] px-8 md:px-12 lg:px-16 pt-16 pb-10 md:pt-20 md:pb-12">
 
         {/* Main Columns Grid */}
@@ -188,7 +185,7 @@ export default function Footer() {
                     <ArrowRight className="w-3 h-3 text-muted-gold" />
                   </span>
                   <span className="group-hover:translate-x-1 transition-transform duration-300 font-body tracking-wide">
-                    Contact & support
+                    Contact and Support
                   </span>
                 </a>
               </li>

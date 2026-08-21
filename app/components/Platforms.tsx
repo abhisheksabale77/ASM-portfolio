@@ -70,11 +70,7 @@ export default function Platforms() {
   }, []);
 
   return (
-    <section
-      id="platforms"
-      data-navbar-color="black"
-      className="bg-white scroll-mt-20 py-20 md:py-24"
-    >
+    <section id="platforms" data-nav-theme="light" className="bg-white scroll-mt-20 py-20 md:py-24">
       <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
 
         <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 mb-12 select-none">

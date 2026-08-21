@@ -201,11 +201,7 @@ export default function About() {
   }, []);
 
   return (
-    <section
-      id="about"
-      data-navbar-color="black"
-      className="bg-[#FAF8F5] py-15 md:py-20 scroll-mt-20"
-    >
+    <section id="about" data-nav-theme="light" className="bg-[#FAF8F5] py-15 md:py-20 scroll-mt-20">
       <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
 
         {/* Decorative Section Header */}
