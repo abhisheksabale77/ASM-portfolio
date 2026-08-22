@@ -23,7 +23,7 @@ const SOCIAL_LINKS = [
   },
   {
     name: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/advabdul.mulla?rdid=Bse439nccLYGTsIC&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1G9UB1ppAn%2F#",
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.95z" />
